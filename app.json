@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AchieveTask2",
-    "slug": "AchieveTask2",
+    "name": "ecommerce-project",
+    "slug": "ecommerce-project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,9 +14,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -25,6 +22,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "ios": {
+      "bundleIdentifier": "com.host.exponent"
     }
   }
 }
