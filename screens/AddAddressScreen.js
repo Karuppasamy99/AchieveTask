@@ -42,7 +42,7 @@ const AddAddressScreen = () => {
   );
   console.log("addresses", addresses);
   return (
-    <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 50 }}>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View
         style={{
           backgroundColor: "#00CED1",

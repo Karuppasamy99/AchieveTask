@@ -36,7 +36,7 @@ const CartScreen = () => {
   };
   const navigation = useNavigation();
   return (
-    <ScrollView style={{ marginTop: 55, flex: 1, backgroundColor: "white" }}>
+    <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
       <View
         style={{
           backgroundColor: "#00CED1",
@@ -74,9 +74,8 @@ const CartScreen = () => {
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>{total}</Text>
       </View>
       <Text style={{ marginHorizontal: 10 }}>EMI details Available</Text>
-
-      <Pressable
-        onPress={() => navigation.navigate("Confirm")}
+          {cart.length ===0 ? <Pressable
+        onPress={() => navigation.navigate("Home")}
         style={{
           backgroundColor: "#FFC72C",
           padding: 10,
@@ -85,10 +84,27 @@ const CartScreen = () => {
           alignItems: "center",
           marginHorizontal: 10,
           marginTop: 10,
+          
         }}
       >
-        <Text>Proceed to Buy ({cart.length}) items</Text>
-      </Pressable>
+        <Text>Buy items</Text>
+      </Pressable> : 
+      <Pressable
+      onPress={() => navigation.navigate("Confirm")}
+      style={{
+        backgroundColor: "#FFC72C",
+        padding: 10,
+        borderRadius: 5,
+        justifyContent: "center",
+        alignItems: "center",
+        marginHorizontal: 10,
+        marginTop: 10,
+        
+      }}
+    >
+      <Text>Proceed to Buy ({cart.length}) items</Text>
+    </Pressable> }
+      
 
       <Text
         style={{

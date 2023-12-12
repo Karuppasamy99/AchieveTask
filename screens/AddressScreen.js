@@ -62,7 +62,7 @@ const AddressScreen = () => {
       })
   }
   return (
-    <ScrollView style={{ marginTop: 50 }}>
+    <ScrollView>
       <View style={{ height: 50, backgroundColor: "#00CED1" }} />
 
       <View style={{ padding: 10 }}>

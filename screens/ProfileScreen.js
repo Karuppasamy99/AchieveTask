@@ -172,14 +172,14 @@ const ProfileScreen = () => {
                 borderWidth: 1,
                 borderColor: "#d0d0d0",
                 marginHorizontal: 10,
-                justifyContent: "center",
+                justifyContent: "space-between",
                 alignItems: "center",
               }}
               key={order._id}
             >
               {/* Render the order information here */}
               {order.products.slice(0, 1)?.map((product) => (
-                <View style={{ marginVertical: 10 }} key={product._id}>
+                <View style={{ marginVertical: 10, flexDirection:'row', justifyContent:'space-between'}} key={product._id}>
                   <Image
                     source={{ uri: product.image }}
                     style={{ width: 100, height: 100, resizeMode: "contain" }}
