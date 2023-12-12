@@ -30,7 +30,7 @@ const ConfirmationScreen = () => {
   const fetchAddresses = async () => {
     try {
       const response = await axios.get(
-        `http://192.168.0.103:8000/addresses/${userId}`
+        `http://192.168.0.101:8000/addresses/${userId}`
       );
       const { addresses } = response.data;
 
@@ -54,7 +54,7 @@ const ConfirmationScreen = () => {
       };
 
       const response = await axios.post(
-        "http://192.168.0.103:8000/orders",
+        "http://192.168.0.101:8000/orders",
         orderData
       );
       if (response.status === 200) {
@@ -74,7 +74,7 @@ const ConfirmationScreen = () => {
         description: "Adding To Wallet",
         currency: "INR",
         name: "Amazon",
-        key: "rzp_test_E3GWYimxN7YMk8",
+        key: "rzp_test_I3PnWiVnjOIl0s",
         amount: total * 100,
         prefill: {
           email: "void@razorpay.com",
@@ -97,7 +97,7 @@ const ConfirmationScreen = () => {
       };
 
       const response = await axios.post(
-        "http://192.168.0.103:8000/orders",
+        "http://192.168.0.101:8000/orders",
         orderData
       );
       if (response.status === 200) {
@@ -112,7 +112,7 @@ const ConfirmationScreen = () => {
     }
   };
   return (
-    <ScrollView style={{ marginTop: 55 }}>
+    <ScrollView>
       <View style={{ flex: 1, paddingHorizontal: 20, paddingTop: 40 }}>
         <View
           style={{

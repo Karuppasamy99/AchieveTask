@@ -8,6 +8,7 @@ import {
   Pressable,
   TextInput,
   Image,
+  StatusBar,
 } from "react-native";
 import React, { useState, useEffect, useCallback, useContext } from "react";
 import { Feather } from "@expo/vector-icons";
@@ -266,7 +267,7 @@ const HomeScreen = () => {
   const fetchAddresses = async () => {
     try {
       const response = await axios.get(
-        `http://192.168.0.103:8000/addresses/${userId}`
+        `http://192.168.0.101:8000/addresses/${userId}`
       );
       const { addresses } = response.data;
 
@@ -288,12 +289,19 @@ const HomeScreen = () => {
   console.log("address", addresses);
   return (
     <>
+      <StatusBar 
+      
+      animated={true}
+      backgroundColor="#61dafb"
+      
+    />
+      
       <SafeAreaView
         style={{
           paddinTop: Platform.OS === "android" ? 40 : 0,
           flex: 1,
           backgroundColor: "white",
-          marginTop: 50
+          
         }}
       >
         <ScrollView>
